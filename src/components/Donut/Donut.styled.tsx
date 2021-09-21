@@ -1,10 +1,10 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 interface IDonutRingProps {
-    /**
-     * Is this the principal call to action on the page?
-     */
-     percentage: number;
+  /**
+   * Is this the principal call to action on the page?
+   */
+  percentage: number;
 }
 
 export const Meter = styled.meter`
@@ -43,16 +43,14 @@ export const DonutRing = styled.div<IDonutRingProps>`
         border-radius: 999vw;
         content: "";
         display: block;
-        mask-image: ${props => `
-            conic-gradient(
-                hsla(0, 0%, 100%, 1) 0 ${ Math.round((props.percentage / 100) * 360) }deg, 
-                transparent 0 ${ Math.round((props.percentage / 100) * 360) }deg
-            );
-        `};    
+        mask-image: conic-gradient(
+            hsla(0, 0%, 100%, 1) 0 var(--degrees, 0deg), 
+            transparent 0 var(--degrees, 0deg)
+        );
         width: 100%;
     }
 `;
-    
+
 export const DonutHole = styled.div`
     align-items: center;
     display: flex;
