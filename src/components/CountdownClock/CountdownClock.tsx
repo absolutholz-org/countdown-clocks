@@ -9,9 +9,7 @@ interface ICountdownClockProps {
    */
   targetDate: Date;
 
-  startDate?: Date;
-
-  children?: JSX.Element;
+  creationDate?: Date;
 }
 
 enum MILLISECONDS {
@@ -26,8 +24,7 @@ enum MILLISECONDS {
  */
 function CountdownClock({
   targetDate,
-  startDate,
-  children,
+  creationDate,
   ...props
 }: ICountdownClockProps): JSX.Element {
   const [now, setNow] = useState(new Date());
@@ -37,9 +34,9 @@ function CountdownClock({
   const [seconds, setSeconds] = useState(0);
 
   const daysBetweenStartAndTarget =
-    startDate !== undefined
+    creationDate !== undefined
       ? Math.floor(
-          (targetDate.valueOf() - startDate.valueOf()) / MILLISECONDS.day
+          (targetDate.valueOf() - creationDate.valueOf()) / MILLISECONDS.day
         )
       : 365;
 
