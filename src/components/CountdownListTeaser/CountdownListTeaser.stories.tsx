@@ -18,6 +18,6 @@ Primary.args = {
     uid: 'asdfqwer',
     name: 'Christmas in Ohio',
     targetDate: new Date('2021-12-23T12:20:00'),
-    creationDate: new Date('2021-09-18T12:20:00'),
+    startDate: new Date('2021-09-18T12:20:00'),
   },
 };

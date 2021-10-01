@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as S from './CountdownListTeaser.styled';
 
 export interface ICountdown {
   uid: string;
   name: string;
-  creationDate: Date;
+  startDate: Date;
   targetDate: Date;
 }
 
@@ -23,7 +24,9 @@ function CountdownListTeaser({
   return (
     <S.Wrapper>
       <S.Body>
-        <S.Name>{countdown.name}</S.Name>
+        <S.Name>
+          <Link to={`/countdown/${countdown.uid}`}>{countdown.name}</Link>
+        </S.Name>
       </S.Body>
     </S.Wrapper>
   );

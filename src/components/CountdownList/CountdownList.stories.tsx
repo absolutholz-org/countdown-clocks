@@ -19,13 +19,13 @@ Primary.args = {
       uid: 'asdfqwer',
       name: 'Christmas in Ohio',
       targetDate: new Date('2021-12-23T12:20:00'),
-      creationDate: new Date('2021-09-18T12:20:00'),
+      startDate: new Date('2021-09-18T12:20:00'),
     },
     {
       uid: 'qwerasdf',
       name: "Vroni's Birthday",
       targetDate: new Date('2021-10-28T00:00:00'),
-      creationDate: new Date('2020-10-29T00:00:00'),
+      startDate: new Date('2020-10-29T00:00:00'),
     },
   ],
 };

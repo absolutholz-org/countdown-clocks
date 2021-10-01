@@ -10,7 +10,7 @@ export default {
     targetDate: {
       control: { type: 'date' },
     },
-    creationDate: {
+    startDate: {
       control: { type: 'date' },
     },
   },
@@ -23,5 +23,5 @@ const Template: ComponentStory<typeof CountdownClock> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   targetDate: new Date('2021-12-23T12:20:00'),
-  creationDate: new Date('2021-09-18T12:20:00'),
+  startDate: new Date('2021-09-18T12:20:00'),
 };
