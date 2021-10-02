@@ -71,6 +71,7 @@ function CountdownClock({
 
   useEffect(() => {
     updateClocks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [now]);
 
   useEffect(() => {

@@ -23,10 +23,9 @@ function Countdown({ match, ...props }: ICountdownProps): JSX.Element {
   const [startDate, setstartDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    console.log('qwer');
     getOneByIndex('uid', match.params.id)
       .then((data) => {
-        console.log({ data });
+        // console.log({ data });
         // @ts-ignore
         setTitle(data.name);
         // @ts-ignore
@@ -35,6 +34,7 @@ function Countdown({ match, ...props }: ICountdownProps): JSX.Element {
         setstartDate(data.startDate);
       })
       .catch(console.error);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

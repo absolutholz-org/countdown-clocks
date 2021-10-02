@@ -23,6 +23,6 @@ const Template: ComponentStory<typeof CountdownForm> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   onSubmit: (formData) => {
-    console.log('submitted', formData);
+    // console.log('submitted', formData);
   },
 };

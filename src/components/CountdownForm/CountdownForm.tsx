@@ -1,7 +1,5 @@
 import React, { FormEvent, useRef } from 'react';
 
-import * as S from './CountdownForm.styled';
-
 export interface ICountdownFormData {
   name: string;
   targetDate: Date;
